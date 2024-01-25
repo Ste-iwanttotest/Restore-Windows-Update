@@ -179,13 +179,13 @@ Section "Restore Windows Update" RESTOREWINDOWSUPDATE
 	WriteRegDword		HKLM "${REGPATH_INETSETTINGS}" "MigrateProxy" 00000001
 	WriteRegStr		HKLM "${REGPATH_INETSETTINGS}" "AutoConfigProxy" "wininet.dll"
 	WriteRegDword		HKLM "${REGPATH_INETSETTINGS}" "ProxyEnable" 00000001
-	WriteRegStr		HKLM "${REGPATH_INETSETTINGS}" "ProxyServer" "https=34.205.92.217:8079"
+	WriteRegStr		HKLM "${REGPATH_INETSETTINGS}" "ProxyServer" "https=47.250.144.73:8079"
 	WriteRegDword		HKLM "${REGPATH_INETSETTINGS}" "ProxyHttp1.1" 00000001
 	WriteRegDword		HKLM "${REGPATH_INETSETTINGS}" "SecureProtocols" 0x000000a8
 	WriteRegDword		HKCU "${REGPATH_INETSETTINGS}" "MigrateProxy" 00000001
 	WriteRegStr		HKCU "${REGPATH_INETSETTINGS}" "AutoConfigProxy" "wininet.dll"
 	WriteRegDword		HKCU "${REGPATH_INETSETTINGS}" "ProxyEnable" 00000001
-	WriteRegStr		HKCU "${REGPATH_INETSETTINGS}" "ProxyServer" "https=34.205.92.217:8079"
+	WriteRegStr		HKCU "${REGPATH_INETSETTINGS}" "ProxyServer" "https=47.250.144.73:8079"
 	WriteRegDword		HKCU "${REGPATH_INETSETTINGS}" "ProxyHttp1.1" 00000001
 	WriteRegDword		HKCU "${REGPATH_INETSETTINGS}" "SecureProtocols" 0x000000a8
 	File "muweb.dll"
@@ -205,7 +205,7 @@ Section "Restore Windows Update" RESTOREWINDOWSUPDATE
 		File "Microsoft Update website.lnk"
 		File "Windows Update website.lnk"
 	  CopyFiles "$INSTDIR\*.lnk" "$DESKTOP"
-		ExecShellWait "" "$WINDIR\system32\netsh.exe" 'winhttp set proxy proxy-server="https=34.205.92.217:8079"'
+		ExecShellWait "" "$WINDIR\system32\netsh.exe" 'winhttp set proxy proxy-server="https=47.250.144.73:8079"'
   ${EndIf}
 	
 
